@@ -1,6 +1,8 @@
 <h2><%= @book.title %></h2>
 <h3><%= @book.author %></h3>
+<% if @book.category %>
 <h4>Category: <%= @book.category.name %></h4>
+<% end %>
 <p><%= @book.description %></p>
 
 <%= link_to "Back", root_path(@book) %>

@@ -37,7 +37,7 @@ class BooksController < ApplicationController
   def update
     @book.category_id = params[:category_id]
     if @book.update(book_params)
-      redirect_to book_params(@book)
+      redirect_to book_path(@book)
     else
       render 'edit'
     end
